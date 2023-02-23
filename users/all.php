@@ -17,6 +17,12 @@
 </head>
 
 <body>
+
+    <!-- navbar partial -->
+    <?php
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/escom-project/views/partials/navbar.php';
+    ?>
+
     <div class="container-fluid">
         <div class="container p-5">
 

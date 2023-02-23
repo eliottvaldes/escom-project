@@ -17,6 +17,11 @@
 </head>
 
 <body>
+    <!-- navbar partial -->
+    <?php
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/escom-project/views/partials/navbar.php';
+    ?>
+
     <div class="container-fluid">
         <div class="container p-5">
 
@@ -24,10 +29,10 @@
                 <h1 class="mb-5">Sign In</h1>
 
                 <div v-if="response">
-                    <div v-if="response.ok" class="text-success" >
+                    <div v-if="response.ok" class="text-success">
                         {{ response.msg }} Token: {{ response.tkn }}
                     </div>
-                    <div v-else class="text-danger" >
+                    <div v-else class="text-danger">
                         {{ response.msg }}
                     </div>
                 </div>
