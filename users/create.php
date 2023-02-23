@@ -24,8 +24,7 @@
                 <!-- header for create new user -->
                 <h1 class="mb-4">Create New User</h1>
 
-                <div v-if="message" :class="{ 'alert alert-success alert-dismissible fade show': success, 'alert alert-danger alert-dismissible fade show': !success }" class="" role="alert">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div v-if="message" :class="{ 'text-success': success, 'text-danger': !success }" class="" role="alert">
                     <div>{{ message }}</div>
                 </div>
 
