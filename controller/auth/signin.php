@@ -25,8 +25,12 @@ function signInUser(string $email, string $password): string
     // Obtener el usuario
     $user = $stmt->fetch();
 
-    // Verificar si el usuario existe y está activo
-    if (!$user || $user['status'] != 1) {
+    // Verificar si el usuario existe
+    if(!$user){
+        throw new Exception("Usuario no encontrado.");
+    }
+
+    if ($user['status'] != 1) {
         throw new Exception("Usuario bloqueado - contacta al administrador.");
     }
 
