@@ -51,7 +51,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 # REQUIRE THE CONTROLLER FILE TO SIGN IN A USER -> we can use relative or full path
 # RELATIVE PATH
-require_once '../../../controller/users/signin.php';
+require_once '../../../controller/auth/signin.php';
 
 # execute the function to sign in a user -> the function return a tkn if the user is found and the password is correct
 try {
